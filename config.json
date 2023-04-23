@@ -1,0 +1,7 @@
+{
+    "oanda": {
+        "token": "OANDA-TOKEN",
+        "account": "OANDA-ACCOUNT",
+        "practice": false
+    }
+}
