@@ -5,7 +5,7 @@ from datetime import datetime
 import json
 import csv
 
-class VolatilityStrategy(bt.Strategy):
+class SeizeVolatilityStrategy(bt.Strategy):
     params = (('price_base', 1.0300),
               ('price_unit', 0.0020),
               ('value_unit', 600),
@@ -142,7 +142,7 @@ data = store.getdata(dataname="EUR_USD", **datakwargs)
 cerebro.adddata(data)
 cerebro.setbroker(store.getbroker())
 
-cerebro.addstrategy(VolatilityStrategy)
+cerebro.addstrategy(SeizeVolatilityStrategy)
 
 print('LiveVolatility start...')
 cerebro.run()
